@@ -13,19 +13,19 @@ apt-get update
 packages="
   bubblewrap
   build-essential
+  ca-certificates
   curl
   git
-  libcap-dev
-  libx11-dev
   nano
   opam
   rsync
+  m4
   sudo
   unzip
   $extra_packages
 "
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y $packages
+DEBIAN_FRONTEND=noninteractive apt-get install -y $packages --no-install-recommends
 
 if [ -z "$(git config user.email)" ]; then
   git config --global user.email "docker@example.com"

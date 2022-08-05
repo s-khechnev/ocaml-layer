@@ -25,7 +25,7 @@ os="ubuntu"
 # by gpgv.
 #
 #
-from="ubuntu:20.04"
+from="ubuntu:22.04"
 
 # This is the argument of 'docker pull', 'docker push', etc. for the image
 # we are building.
